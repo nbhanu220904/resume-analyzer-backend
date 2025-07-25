@@ -93,6 +93,10 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: "Internal Server Error" });
 });
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Resume Analyzer API!");
+});
+
 // ✅ Start server
 app.listen(8000, () => {
   console.log("🚀 Backend running at http://localhost:8000");
